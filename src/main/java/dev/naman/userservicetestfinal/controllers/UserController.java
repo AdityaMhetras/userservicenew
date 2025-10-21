@@ -2,7 +2,6 @@ package dev.naman.userservicetestfinal.controllers;
 
 import dev.naman.userservicetestfinal.dtos.SetUserRolesRequestDto;
 import dev.naman.userservicetestfinal.dtos.UserDto;
-import dev.naman.userservicetestfinal.models.User;
 import dev.naman.userservicetestfinal.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    private UserService userService;
+    private final UserService userService;
 
     public UserController(UserService userService) {
         this.userService = userService;

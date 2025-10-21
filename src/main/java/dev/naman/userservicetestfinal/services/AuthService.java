@@ -1,6 +1,7 @@
 package dev.naman.userservicetestfinal.services;
 
 import dev.naman.userservicetestfinal.dtos.UserDto;
+import dev.naman.userservicetestfinal.mapper.UserMapper;
 import dev.naman.userservicetestfinal.models.Session;
 import dev.naman.userservicetestfinal.models.SessionStatus;
 import dev.naman.userservicetestfinal.models.User;
@@ -47,7 +48,7 @@ public class AuthService {
         session.setUser(user);
         sessionRepository.save(session);
 
-        UserDto userDto = UserDto.from(user);
+        UserDto userDto = UserMapper.INSTANCE.toDto(user);
 
 //        Map<String, String> headers = new HashMap<>();
 //        headers.put(HttpHeaders.SET_COOKIE, token);
@@ -84,7 +85,7 @@ public class AuthService {
         
         User savedUser = userRepository.save(user);
 
-        return UserDto.from(savedUser);
+        return UserMapper.INSTANCE.toDto(savedUser);
     }
 
     public SessionStatus validate(String token, Long userId) {

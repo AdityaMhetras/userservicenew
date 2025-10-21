@@ -3,11 +3,10 @@ package dev.naman.userservicetestfinal.dtos;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.io.Serializable;
-import java.util.Set;
 
 /**
- * DTO for {@link dev.naman.userservicetestfinal.models.User}
+ * DTO for {@link dev.naman.userservicetestfinal.models.Role}
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record UserDto(Long id, String email, Set<RoleDto> roles) implements Serializable {
+public record RoleDto(Long id, String role) implements Serializable {
 }
