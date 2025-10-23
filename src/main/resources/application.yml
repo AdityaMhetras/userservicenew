@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: userservicetestfinalapplication
+    url: jdbc:mysql://localhost:3306/userservicetestfinalapplication
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+server:
+  error:
+    path: /error
+    include-message: never
+    include-stacktrace: never
+  port: 9000
+jwt:
+  secret: 3n8fKJvZ9YxqZk5vZ2FvZ3N2b3N2c3N2b3N2c3N2b3N2c3N2b3N2c3N2b3N21234
