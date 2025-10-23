@@ -27,11 +27,13 @@ public class CustomUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("User not found with email: " + email);
         }
 
+        return new CustomSpringUserDetails(user.get());
+
         // Create UserDetails object
-        return org.springframework.security.core.userdetails.User
+/*        return org.springframework.security.core.userdetails.User
                 .withUsername(user.get().getEmail())
                 .password(user.get().getPassword())
                 .authorities("USER") // You can customize authorities based on your roles
-                .build();
+                .build();*/
     }
 }
