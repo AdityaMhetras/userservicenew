@@ -7,13 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-public class CustomSpringUserDetails implements UserDetails {
-
-    private final User user;
-
-    public CustomSpringUserDetails(User user) {
-        this.user = user;
-    }
+public record CustomSpringUserDetails(User user) implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
