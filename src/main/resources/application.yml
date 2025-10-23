@@ -15,3 +15,6 @@ server:
   port: 9000
 jwt:
   secret: 3n8fKJvZ9YxqZk5vZ2FvZ3N2b3N2c3N2b3N2c3N2b3N2c3N2b3N2c3N2b3N21234
+logging:
+  level:
+    org.springframework.security: trace
