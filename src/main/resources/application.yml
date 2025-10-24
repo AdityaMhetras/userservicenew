@@ -10,8 +10,8 @@ spring:
 server:
   error:
     path: /error
-    include-message: never
-    include-stacktrace: never
+    include-message: always
+    include-stacktrace: always
   port: 9000
 jwt:
   secret: 3n8fKJvZ9YxqZk5vZ2FvZ3N2b3N2c3N2b3N2c3N2b3N2c3N2b3N2c3N2b3N21234
